@@ -1,0 +1,85 @@
+@import '../../styles/colors.scss';
+
+.navClose, .navOpen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  top: 110%;
+  left: 0;
+  transition: transform .5s ease-in-out;
+  @media screen and (min-width: 768px) {
+    position: static;
+    box-shadow: none;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: .5em;
+    @media  screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  li {
+    padding: .5em;
+  }
+  .navArrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    .arrowPosition1 {
+      transform: rotate(0);
+      transition: transform .5s ease;
+    }
+    .arrowPosition2 {
+      transform: rotate(90deg);
+    }
+  }
+  .subNav {
+    position: relative;
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+      overflow: visible;
+    }
+    .subNavClose,
+    .subNavOpen {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      padding: 0;
+      transform: translateY(-100%);
+      transition: transform .5s ease-in-out;
+      @media screen and (min-width: 768px) {
+        transform: translateY(0);
+        visibility: hidden;
+        transition: visibility .5s ease-in-out;
+        border-top: 1px solid red;
+      }
+    }
+    .subNavOpen {
+      position: static;
+      transform: translateY(0);
+      @media screen and (min-width: 768px) {
+        position: absolute;
+        visibility: visible;
+      }
+    }
+  }
+}
+.navOpen {
+  transform: translateX(-100%);
+  @media screen and (min-width: 768px) {
+    transform: translateX(0);
+  }
+}
