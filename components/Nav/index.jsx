@@ -34,7 +34,7 @@ const Nav = ({ isOpen }) => {
         </li>
         <li>
           <section className={styles.navArrow}>
-            <Link href="/nintendo">
+            <Link href="/Nintendo">
               <a>Nintendo</a>
             </Link>
             <div
@@ -63,7 +63,7 @@ const Nav = ({ isOpen }) => {
               }
             >
               <li>
-                <Link href="/nintendo/pokemon">
+                <Link href="/Nintendo/Pokemon">
                   <a>Pokémon</a>
                 </Link>
               </li>
