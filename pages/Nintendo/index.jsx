@@ -29,6 +29,7 @@ const Nintendo = ({ offerts }) => {
         {offerts.map((res, index) => (
           <div key={index} className={styles.iframeBox}>
             <Iframe uri={res.uri} />
+            <h3>{res.uri}</h3>
           </div>
         ))}
       </div>
@@ -40,7 +41,7 @@ export async function getServerSideProps() {
   await dbConnect();
 
   /* find all the data in database */
-  const result = await offertsModel.find({ category: "nintendo" });
+  const result = await offertsModel.find({ category: "Nintendo" });
   const offerts = result.map((doc) => {
     const offert = doc.toObject();
     offert._id = offert._id.toString();
