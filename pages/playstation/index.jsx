@@ -10,28 +10,33 @@ import Iframe from "../../components/Iframe";
 import dbConnect from "../../mongo/dbConnect";
 import offertsModel from "../../mongo/models/offerts.model";
 
-const Nintendo = ({ offerts }) => {
+const Playstation = ({ offerts }) => {
   return (
     <Layout
-      title="Margames | Nintendo"
-      description="las mejores ofertas en videojuegos de Nintendo, videojuegos para Nintendo Switch"
+      title="Margames | PlayStation"
+      description="las mejores ofertas en videojuegos de Sony Playstation"
       tags={[
-        "Nintendo",
-        "Nintendo Switch",
-        "Pokémon",
-        "Mario",
-        "The legend of Zelda",
-        "metroid",
+        "Playstation",
+        "Fifa",
+        "Uncharter",
+        "Sony",
+        "PS1",
+        "PS2",
+        "PS3",
+        "PS4",
+        "PS5",
       ]}
     >
-      <TitleH2>Nintendo</TitleH2>
-      <div className={styles.cardBox}>
-        {offerts.map((res, index) => (
-          <div key={index} className={styles.iframeBox}>
-            <Iframe uri={res.uri} />
-          </div>
-        ))}
-      </div>
+      <TitleH2>Playstation</TitleH2>
+      <section>
+        <div className={styles.cardBox}>
+          {offerts.map((res, index) => (
+            <div key={index} className={styles.iframeBox}>
+              <Iframe uri={res.uri} />
+            </div>
+          ))}
+        </div>
+      </section>
     </Layout>
   );
 };
@@ -40,7 +45,7 @@ export async function getServerSideProps() {
   await dbConnect();
 
   /* find all the data in database */
-  const result = await offertsModel.find({ category: "Nintendo" });
+  const result = await offertsModel.find({ category: "Playstation" });
   const offerts = result.map((doc) => {
     const offert = doc.toObject();
     offert._id = offert._id.toString();
@@ -50,4 +55,4 @@ export async function getServerSideProps() {
   return { props: { offerts: offerts } };
 }
 
-export default Nintendo;
+export default Playstation;

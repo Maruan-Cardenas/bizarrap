@@ -28,8 +28,13 @@ const Nav = ({ isOpen }) => {
           </Link>
         </li>
         <li>
+          <Link href="/noticias">
+            <a>Noticias</a>
+          </Link>
+        </li>
+        <li>
           <section className={styles.navArrow}>
-            <Link href="/Nintendo">
+            <Link href="/nintendo">
               <a>Nintendo</a>
             </Link>
             <div
@@ -58,7 +63,7 @@ const Nav = ({ isOpen }) => {
               }
             >
               <li>
-                <Link href="/Nintendo/Pokemon">
+                <Link href="/nintendo/pokemon">
                   <a>Pokémon</a>
                 </Link>
               </li>
@@ -67,7 +72,7 @@ const Nav = ({ isOpen }) => {
         </li>
         <li>
           <section className={styles.navArrow}>
-            <Link href="/Playstation">
+            <Link href="/playstation">
               <a>Playstation</a>
             </Link>
             <div
@@ -102,8 +107,8 @@ const Nav = ({ isOpen }) => {
               }
             >
               <li>
-                <Link href="/Playstation/Horizon_Zero_Down">
-                  <a>Horizon Zero Down</a>
+                <Link href="/playstation/horizon">
+                  <a>Horizon</a>
                 </Link>
               </li>
             </ul>

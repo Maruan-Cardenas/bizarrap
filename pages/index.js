@@ -1,8 +1,9 @@
 // Components
 import Layout from "../components/Layout";
+import Slider from "../components/Slider";
 import TitleH2 from "../components/TitleH2";
 
-export default function Home() {
+export default function Home({ offerts }) {
   return (
     <Layout
       title="Margames | home"
