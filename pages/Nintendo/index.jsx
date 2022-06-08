@@ -40,7 +40,7 @@ export async function getServerSideProps() {
   await dbConnect();
 
   /* find all the data in database */
-  const result = await offertsModel.find({ category: "Nintendo" });
+  const result = await offertsModel.find({ category: "nintendo" });
   const offerts = result.map((doc) => {
     const offert = doc.toObject();
     offert._id = offert._id.toString();
