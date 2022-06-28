@@ -2,28 +2,27 @@
 import { useState } from "react";
 
 // Components
-import Nav from "../Nav";
 import Link from "next/link";
+import Nav from "../Nav/index";
 
 //styles
 import styles from "./styles.module.scss";
 
-const Header = ({ offerts }) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(offerts);
   return (
     <header className={styles.header}>
       <Link href="/">
         <a className={styles.title}>
-          <div>MarGames</div>
+          <h1>Bizarrap&apos;s Sessions</h1>
         </a>
       </Link>
-      <Nav isOpen={isOpen} offerts={offerts} />
       <div className={styles.navButton} onClick={() => setIsOpen(!isOpen)}>
         <div
           className={isOpen ? styles.NavButtonOpen : styles.navButtonClose}
         />
       </div>
+      <Nav isOpen={isOpen} />
     </header>
   );
 };

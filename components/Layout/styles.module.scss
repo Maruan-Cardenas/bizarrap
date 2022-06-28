@@ -1,7 +1,8 @@
+@import '../../styles/colors.scss';
 .main {
   padding: 0;
   margin: 0;
-  background: #fafafa;
+  background-color: $black2;
   min-height: calc(100vh - 113px);
   display: flex;
   flex-direction: column;

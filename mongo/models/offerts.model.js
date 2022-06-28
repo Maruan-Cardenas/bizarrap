@@ -6,6 +6,18 @@ const OffertsSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide a uri of offert."],
   },
+  imageUri: {
+    type: String,
+    required: [true, "Please provide a image uri of offert."],
+  },
+  price: {
+    type: Number,
+    required: [true, "Please provide a price of offert."],
+  },
+  oldPrice: {
+    type: Number,
+    required: [true, "Please provide a old price of offert."],
+  },
   title: {
     type: String,
     required: [true, "Please provide a title of offert."],
@@ -17,6 +29,9 @@ const OffertsSchema = new mongoose.Schema({
   subcategory: {
     type: String,
     required: [true, "Please provide a subcategory of offert."],
+  },
+  time: {
+    type: String,
   },
 });
 
