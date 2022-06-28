@@ -12,13 +12,38 @@ const Nav = ({ isOpen }) => {
     <nav className={isOpen ? styles.navClose : styles.navOpen}>
       <ul>
         <li>
-          <Link href="/session51">
+          <Link href="/session/51">
             <a>Session 51</a>
           </Link>
         </li>
         <li>
-          <Link href="">
+          <Link href="/">
             <a>Session 50 próximamente</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>Session 49 próximamente</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>Session 48 próximamente</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>Session 50 próximamente</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>Session 49 próximamente</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>Session 48 próximamente</a>
           </Link>
         </li>
       </ul>

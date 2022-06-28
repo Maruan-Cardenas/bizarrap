@@ -5,10 +5,19 @@
   grid-template-rows: repeat(3, min-content);
   width: 90vw;
   margin: 2em 0 1em 0;
+  @media screen and (min-width: 768px) {
+    width: 60vw;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 2fr 1fr;
+    }
   .biografyTitle {
     color: $white1;
     text-align: center;
     font-size: 1.2em;
+    @media screen and (min-width: 768px) {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
   }
   .biografyData {
     color: $white2;
@@ -25,31 +34,48 @@
     height: 150px;
     justify-self: center;
     margin-bottom: 1em;
+    @media screen and (min-width: 768px) {
+      justify-self: right;
+      align-self: center;
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
   }
 }
 .ramdomSession {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 90vw;
   margin: 1em 0 1em 0;
+  @media screen and (min-width: 768px) {
+      width: 60vw;
+    }
   .sessionBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
   }
   .placeholder {
-    background-color: red;
     aspect-ratio: 16 / 9;
   }
   .sessionTitle {
     text-align: center;
     font-size: 1.2em;
     color: $white1;
+    @media screen and (min-width: 768px) {
+        font-size: 1.5em;
+      }
   }
     .videoTitle {
       text-align: center;
       font-size: 0.8em;
       color: $white2;
+      @media screen and (min-width: 768px) {
+          font-size: 1em;
+        }
     }
   .sessionButton {
     padding: 1em;
@@ -58,5 +84,6 @@
     color: $white1;
     border-radius: 5px;
     cursor: pointer;
+    width: 300px;
   }
 }

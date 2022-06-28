@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.scss";
 // Components
 import Iframe from "../components/Iframe";
 import Image from "next/image";
+import Link from "next/link";
 import Layout from "../components/Layout";
 
 // Data
@@ -14,7 +15,7 @@ import { PlayList } from "../components/PlayList";
 
 // Images
 import biza from "../public/bizarrapPerfil.jpg";
-import Link from "next/link";
+import randomSessionImage from "../public/randomSession.jpg";
 
 export default function Home() {
   const [uri, setUri] = useState("");
@@ -101,7 +102,9 @@ export default function Home() {
           {uri ? (
             <Iframe uri={uri} title={title} />
           ) : (
-            <div className={styles.placeholder}>Hola</div>
+            <div className={styles.placeholder}>
+              <Image src={randomSessionImage} alt="Imagen de random session" />
+            </div>
           )}
           <h3 className={styles.videoTitle}>
             {title ? title : "¿Qué canción tocará?"}
