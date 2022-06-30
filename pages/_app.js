@@ -2,11 +2,13 @@ import "../styles/globals.scss";
 import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
+  const key = process.env.NEXT_PUBLIC_ANALYTICS_ID;
+  console.log(key);
   return (
     <>
       <Script
         strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALITYCS_KEY}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${key}`}
       />
       <Script strategy="lazyOnload" id="my-script">
         {`
@@ -15,10 +17,10 @@ function MyApp({ Component, pageProps }) {
             dataLayer.push(arguments)
           }
           gtag('js', new Date())
-          gtag('config', ${process.env.GOOGLE_ANALITYCS_KEY})
+          gtag('config', '${key}')
         `}
       </Script>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
