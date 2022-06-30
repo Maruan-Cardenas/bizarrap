@@ -1,10 +1,22 @@
+// Styles
 import styles from "./Biografy.module.scss";
+
+// Components
 import Layout from "../../components/Layout";
+
+// Next Components
+import Image from 'next/image'
+
+// Images
+import bizarrap from '../../public/Bizarrap-actual.jpg'
 
 const Biografy = () => {
   return (
     <Layout>
-      <article className={styles.biografy}>
+      <section className={styles.biografy}>
+        <div className={styles.biografyImage}>
+          <Image src={bizarrap} />
+        </div>
         <p>
           Gonzalo Julián Conde (Ramos Mejía, Buenos Aires, 29 de agosto de
           1998), conocido artísticamente como Bizarrap (abreviado BZRP), es un
@@ -34,7 +46,7 @@ const Biografy = () => {
           2022, sin embargo su BZRP Music Sessions con más reproducciones en la
           plataforma YouTube es la número 36 con la artista Nathy Peluso.
         </p>
-      </article>
+      </section>
     </Layout>
   );
 };
