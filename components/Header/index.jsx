@@ -22,7 +22,7 @@ const Header = () => {
           className={isOpen ? styles.NavButtonOpen : styles.navButtonClose}
         />
       </div>
-      <Nav isOpen={isOpen} />
+      <Nav open={isOpen} />
     </header>
   );
 };

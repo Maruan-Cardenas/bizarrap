@@ -1,6 +1,6 @@
 import Layout from "../../components/Layout";
 
-const Sessio51 = () => {
+const Session51 = () => {
   return (
     <Layout>
       <div>
@@ -10,4 +10,4 @@ const Sessio51 = () => {
   );
 };
 
-export default Sessio51;
+export default Session51;

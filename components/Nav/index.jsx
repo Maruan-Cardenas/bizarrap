@@ -6,46 +6,49 @@ import styles from "./styles.module.scss";
 
 // Next Components
 import Link from "next/link";
+import Image from "next/image";
 
-const Nav = ({ isOpen }) => {
+// motion Component
+import { motion } from "framer-motion";
+
+// Images
+import subNavIcon from "../../public/subNavIcon.png";
+
+const Nav = ({ open }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className={isOpen ? styles.navClose : styles.navOpen}>
+    <nav className={open ? styles.navClose : styles.navOpen}>
       <ul>
-        <li>
-          <Link href="/session/51">
-            <a>Session 51</a>
-          </Link>
+        <li onClick={() => setIsOpen(!isOpen)}>
+          <div>
+            <span
+              className={isOpen ? styles.subNavIcon : styles.subNavIconOpen}
+            >
+              <Image src={subNavIcon} alt="Icono de submenu" />
+            </span>
+            Sessions
+          </div>
+          {isOpen && (
+            <motion.ol
+              className={styles.subNav}
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+            >
+              <li>
+                <Link href="session-51">Session 51</Link>
+              </li>
+              <li>
+                <Link href="session-50">Session 50 próximanente</Link>
+              </li>
+              <li>
+                <Link href="session-49">Session 49 próximanente</Link>
+              </li>
+            </motion.ol>
+          )}
         </li>
-        <li>
-          <Link href="/">
-            <a>Session 50 próximamente</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a>Session 49 próximamente</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a>Session 48 próximamente</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a>Session 50 próximamente</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a>Session 49 próximamente</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a>Session 48 próximamente</a>
-          </Link>
-        </li>
+        <li>Colaboraciones</li>
       </ul>
     </nav>
   );

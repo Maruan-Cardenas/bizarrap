@@ -4,8 +4,6 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: $white1-transparent;
   border-radius: 0 0.5em 0.5em 0;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -15,12 +13,24 @@
   width: 40vw;
   transition: transform .5s ease-in-out;
   z-index: 10;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    .subNavIcon, .subNavIconOpen {
+      width: 12px;
+      transform: rotate(180deg);
+      transition: transform 1s ease;
+    }
+    .subNavIconOpen {
+      transform: rotate(0deg);
+    }
+  }
   @media screen and (min-width: 768px) {
     position: static;
     box-shadow: none;
     width: 100%;
     border-radius: 0 0 .5em .5em;
-    overflow: scroll;
   }
   ul {
     list-style: none;
@@ -35,6 +45,10 @@
     padding: .5em;
     color: $black1;
     font-weight: bold;
+  }
+  .subNav {
+    list-style: none;
+    padding: 0  0 0.5em;
   }
 }
 .navOpen {
