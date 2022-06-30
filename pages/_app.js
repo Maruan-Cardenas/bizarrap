@@ -3,7 +3,6 @@ import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   const key = process.env.NEXT_PUBLIC_ANALYTICS_ID;
-  console.log(key);
   return (
     <>
       <Script

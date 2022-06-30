@@ -48,7 +48,9 @@ const Nav = ({ open }) => {
             </motion.ol>
           )}
         </li>
-        <li>Colaboraciones</li>
+        <li>
+          <Link href="/biografia">Biografía</Link>
+        </li>
       </ul>
     </nav>
   );
