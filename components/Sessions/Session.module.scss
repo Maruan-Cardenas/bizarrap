@@ -1,0 +1,18 @@
+@import '../../styles/colors.scss';
+
+.session {
+  color: $white2;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+  .title {
+    text-align: center;
+  }
+  .video {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+  }
+}

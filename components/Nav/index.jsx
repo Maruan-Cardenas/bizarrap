@@ -20,6 +20,9 @@ const Nav = ({ open }) => {
   return (
     <nav className={open ? styles.navClose : styles.navOpen}>
       <ul>
+        <li>
+          <Link href="/">Home</Link>
+        </li>
         <li onClick={() => setIsOpen(!isOpen)}>
           <div>
             <span

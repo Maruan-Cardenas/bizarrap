@@ -1,11 +1,16 @@
+// Components
 import Layout from "../../components/Layout";
+import Session from "../../components/Sessions";
+
+// Images
+import bizarrap from "../../public/Bizarrap-actual.jpg";
 
 const Session51 = () => {
   return (
     <Layout>
-      <div>
-        <h2>Session 51</h2>
-      </div>
+      <Session id={51} image={bizarrap}>
+        Biografia
+      </Session>
     </Layout>
   );
 };

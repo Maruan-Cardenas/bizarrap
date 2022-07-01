@@ -16,6 +16,7 @@ import { PlayList } from "../components/PlayList";
 // Images
 import biza from "../public/bizarrapPerfil.jpg";
 import randomSessionImage from "../public/randomSession.jpg";
+import Ads from "../components/Ads";
 
 export default function Home() {
   const [uri, setUri] = useState("");
@@ -99,6 +100,7 @@ export default function Home() {
           <Link href="/biografia">Más información</Link>
         </article>
       </section>
+      <Ads />
       <section className={styles.ramdomSession}>
         <h2 className={styles.sessionTitle}>Random Session</h2>
         <div className={styles.sessionBox}>
