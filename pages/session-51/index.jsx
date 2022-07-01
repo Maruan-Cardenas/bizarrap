@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import Session from "../../components/Sessions";
 
 // Images
-import bizarrap from "../../public/Bizarrap-actual.jpg";
+import bizarrap from "../../public/bizarrap-actual.jpg";
 
 const Session51 = () => {
   return (

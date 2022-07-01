@@ -8,7 +8,7 @@ import Layout from "../../components/Layout";
 import Image from "next/image";
 
 // Images
-import bizarrap from "../../public/Bizarrap-actual.jpg";
+import bizarrap from "../../public/bizarrap-actual.jpg";
 
 const Biografy = () => {
   return (
