@@ -13,9 +13,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <a className={styles.title}>
-          <h1>Bizarrap&apos;s Sessions</h1>
-        </a>
+        <a className={styles.title}>Bizarrap&apos;s Sessions</a>
       </Link>
       <div className={styles.navButton} onClick={() => setIsOpen(!isOpen)}>
         <div

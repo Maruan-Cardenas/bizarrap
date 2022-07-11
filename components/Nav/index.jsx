@@ -40,7 +40,10 @@ const Nav = ({ open }) => {
               transition={{ duration: 0.8 }}
             >
               <li>
-                <Link href="session-51">Session 51</Link>
+                <Link href="session-52">Session 52 - Quevedo</Link>
+              </li>
+              <li>
+                <Link href="session-50">Session 51 próximanente</Link>
               </li>
               <li>
                 <Link href="session-50">Session 50 próximanente</Link>

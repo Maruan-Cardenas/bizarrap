@@ -1,15 +1,31 @@
 import styles from "./Iframe.module.scss";
+import YouTube from "react-youtube";
+const Iframe = ({ uri, title, random }) => {
+  const opts = {
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+  const playVideo = (e) => {
+    setTimeout(() => {
+      e.target.playVideo();
+    }, 1000);
+  };
 
-const Iframe = ({ uri, title }) => {
+  const replay = (e) => {
+    e.target.seekTo(0);
+  };
   return (
-    <iframe
-      className={styles.iframe}
-      src={`https://www.youtube.com/embed/${uri}`}
+    <YouTube
+      className={styles.iframeBox}
+      iframeClassName={styles.iframe}
+      opts={opts}
+      videoId={uri}
       title={title}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
+      onReady={(e) => playVideo(e)}
+      onEnd={random ? () => random() : (e) => replay(e)}
+      onPause={() => console.log("pause")}
+    />
   );
 };
 

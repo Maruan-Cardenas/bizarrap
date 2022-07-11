@@ -100,12 +100,12 @@ export default function Home() {
           <Link href="/biografia">Más información</Link>
         </article>
       </section>
-      <Ads />
+      <Ads text="TextAds" />
       <section className={styles.ramdomSession}>
         <h2 className={styles.sessionTitle}>Random Session</h2>
         <div className={styles.sessionBox}>
           {uri ? (
-            <Iframe uri={uri} title={title} />
+            <Iframe uri={uri} title={title} random={randomSession} />
           ) : (
             <div className={styles.placeholder}>
               <Image src={randomSessionImage} alt="Imagen de random session" />
