@@ -1,5 +1,5 @@
 // Styles
-import styles from "./Session52.module.scss";
+import styles from "../../styles/SessionsPages.module.scss";
 
 // Components
 import Layout from "../../components/Layout";
@@ -14,7 +14,11 @@ import Image from "next/image";
 
 const Session52 = () => {
   return (
-    <Layout>
+    <Layout
+      title="QUEVEDO || BZRP Music Sessions #52"
+      description="Bizzarap Music Session 52 con Quevedo (Pedro domínguez quevedo) la esperadísima colaboración entre el argentino Bizarrap y el canario Pedro Domínguez Quevedo"
+      tags={["Bizarrap", "Quevedo", "Pedro Domínguez Quevedo", "bzrp"]}
+    >
       <Session
         id={52}
         altBiografy="Imágen de Quevedo"
@@ -23,7 +27,9 @@ const Session52 = () => {
       >
         <article className={styles.biografy}>
           <figure className={styles.image}>
-            <Image src={quevedo} alt="Pedro Domínguez Quevedo" />
+            <div>
+              <Image src={quevedo} alt="Pedro Domínguez Quevedo" />
+            </div>
             <figcaption>Pedro Domínguez Quevedo</figcaption>
           </figure>
           <p>

@@ -43,13 +43,13 @@ const Nav = ({ open }) => {
                 <Link href="session-52">Session 52 - Quevedo</Link>
               </li>
               <li>
-                <Link href="session-50">Session 51 próximanente</Link>
-              </li>
-              <li>
-                <Link href="session-50">Session 50 próximanente</Link>
+                <Link href="session-51">Session 51 próximanente</Link>
               </li>
               <li>
                 <Link href="session-49">Session 49 próximanente</Link>
+              </li>
+              <li>
+                <Link href="session-48">Session 48 próximanente</Link>
               </li>
             </motion.ol>
           )}

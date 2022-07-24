@@ -4,13 +4,10 @@ import styles from "./Session.module.scss";
 // Components
 import Iframe from "../Iframe";
 
-// Next Components
-import Image from "next/image";
-
 // Data
 import { PlayList } from "../PlayList";
 
-const Session = ({ altBiografy, image, imageName, id, children }) => {
+const Session = ({ id, children }) => {
   const video = PlayList.find((res) => res.id === id);
   return (
     <section className={styles.session}>
@@ -19,9 +16,12 @@ const Session = ({ altBiografy, image, imageName, id, children }) => {
         <Iframe uri={video.uri} title={video.title} />
       </div>
       <article className={styles.biografy}>{children}</article>
-      <article>
-        <h2>{video.title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: video.letra }} />
+      <article className={styles.letterBox}>
+        <h2 className={styles.letterTitle}>Letra de {video.title}</h2>
+        <div
+          className={styles.letter}
+          dangerouslySetInnerHTML={{ __html: video.letter }}
+        />
       </article>
     </section>
   );

@@ -1,0 +1,29 @@
+.biografy {
+  width: 90vw;
+  padding: 1em 0;
+
+  @media screen and (min-width: 768px) {
+    width: 60vw;
+  }
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    div {
+      width: 90vw;
+    }
+    @media screen and (min-width: 768px) {
+      float: left;
+    }
+    figcaption {
+      font-size: .7em;
+      text-align: center;
+    }
+  }
+  .imageProx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

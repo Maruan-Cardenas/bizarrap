@@ -7,7 +7,38 @@
   flex-direction: column;
   align-items: center;
   margin-top: 3em;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    .title {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+    .video {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      align-self: flex-start;
+      margin-right: 1em;
+    }
+    .letterBox {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      float: left;
+      height: 400px;
+      overflow: scroll;
+
+    }
+  }
   .title {
     text-align: center;
+  }
+  .letterBox {
+    .letterTitle {
+      font-size: 1em;
+    }
+    .letter {
+      max-width: 90vw;
+    }
   }
 }
