@@ -36,7 +36,12 @@ export default function Home() {
     <Layout
       title="Bizarrap | home"
       description="La mejor musica producida por Bizarrap, todas las sesiones en la palma de tu mano"
-      tags={["videojuegos", "nintendo", "playstation", "xbox", "pc"]}
+      tags={[
+        "Bizarrap",
+        "Bizarrap Music",
+        "Bizarrap Sessions",
+        "Bizarrap Music Sessions",
+      ]}
     >
       <section className={styles.biografy}>
         <h2 className={styles.biografyTitle}>Bizarrap: Gonzalo Julián Conde</h2>
