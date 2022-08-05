@@ -43,7 +43,7 @@ const Nav = ({ open }) => {
                 <Link href="session-52">Session 52 - Quevedo</Link>
               </li>
               <li>
-                <Link href="session-51">Session 51 próximanente</Link>
+                <Link href="session-51">Session 51 Villano Antillano</Link>
               </li>
               <li>
                 <Link href="session-49">Session 49 próximanente</Link>

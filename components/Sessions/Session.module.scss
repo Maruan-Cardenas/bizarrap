@@ -37,7 +37,7 @@
     padding: 1em;
     margin-top: 1em;
     @media screen and (min-width: 768px) {
-      height: 350px;
+      height: 360px;
       margin-top: 0;
     }
     .letterTitle {
@@ -48,7 +48,19 @@
       overflow: hidden;
       @media screen and (min-width: 768px) {
         overflow: scroll;
-        min-height: 270px;      
+        min-height: 270px;
+        &::-webkit-scrollbar {
+          width: 4px;
+          height: 0px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: $black1;   
+          border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $white2;
+          border-radius: 2px;
+        }
       }
     }
     button {
