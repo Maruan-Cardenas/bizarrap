@@ -12,6 +12,7 @@ import miniatureQuevedo from "../../public/miniatura_quevedo.jpg";
 
 // Next Components
 import Image from "next/image";
+import Social from "../../components/Social";
 
 const Session52 = () => {
   return (
@@ -66,6 +67,13 @@ const Session52 = () => {
           <figcaption>Pedro Domínguez Quevedo</figcaption>
         </figure>
       </article>
+      <Social
+        singer="Quevedo"
+        instagram="https://www.instagram.com/quevedo.pd/"
+        twitter="https://twitter.com/pedrodquevedo"
+        youtube="https://www.youtube.com/c/QuevedoPD"
+        spotify="https://open.spotify.com/artist/52iwsT98xCoGgiGntTiR7K?si=woV5b46PT7aKn3z1nmc7fg&nd=1"
+      />
     </Layout>
   );
 };

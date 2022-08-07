@@ -11,6 +11,7 @@ import Link from "next/link";
 
 //Images
 import villana from "../../public/villano.jpg";
+import Social from "../../components/Social";
 
 const Session51 = () => {
   return (
@@ -60,6 +61,14 @@ const Session51 = () => {
           <figcaption>Villana Santiago Pacheco</figcaption>
         </figure>
       </article>
+      <Social
+        singer="Villano Antillano"
+        youtube="https://www.youtube.com/c/villanoantillano/about"
+        facebook="https://web.facebook.com/villanoantillano?_rdc=1&_rdr"
+        twitter="https://twitter.com/villanomalandro"
+        spotify="https://open.spotify.com/artist/1pi7nGhOM7PTHR5YEgXVGq?si=rGRw5c6eRuiABZWaqwFPGg&dl_branch=1&nd=1"
+        instagram="https://www.instagram.com/villanoantillano/"
+      />
     </Layout>
   );
 };
