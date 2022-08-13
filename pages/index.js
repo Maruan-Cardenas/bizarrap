@@ -17,6 +17,7 @@ import { PlayList } from "../components/PlayList";
 import biza from "../public/bizarrapPerfil.jpg";
 import randomSessionImage from "../public/randomSession.jpg";
 import Ads from "../components/Ads";
+import Miniature from "../components/Miniature";
 
 export default function Home() {
   const [uri, setUri] = useState("");
@@ -124,6 +125,7 @@ export default function Home() {
           Random
         </button>
       </section>
+      <Miniature />
     </Layout>
   );
 }

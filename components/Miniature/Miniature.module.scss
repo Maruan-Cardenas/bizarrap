@@ -1,0 +1,30 @@
+@import '../../styles/colors.scss';
+
+.miniature {
+  width: 90vw;
+  @media screen and (min-width: 768px) {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .miniatureTitle {
+    @media screen and (min-width: 768px) {
+      grid-column: 1 / span 3;
+      justify-self: center;
+      color: $white1;
+    }
+  }
+  .item {
+    margin-bottom: 1em;
+    .title {
+      color: $white1;
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
+      @media screen and (min-width: 768px) {        
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@
   backdrop-filter: blur(2px);
   top: 110%;
   left: 0;
-  width: 40vw;
+  width: 90vw;
   transition: transform .5s ease-in-out;
   z-index: 20;
   div {
@@ -40,6 +40,7 @@
       padding: .5em;
       color: $black1;
       font-weight: bold;
+      cursor: pointer;
       a {
         cursor: pointer;
       }
